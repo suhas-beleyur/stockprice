@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #eef;
+  text-align: center;
+  padding: 30px;
+}
+
+h2 {
+  color: #333;
+}
+
+div {
+  margin-bottom: 15px;
+}
+
+select, button {
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  font-size: 15px;
+}
+
+button {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5567d5;
+}
+
+#name {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #333;
+}
+
+#price {
+  font-size: 1.1em;
+  color: #222;
+}
+
+#chart {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  margin: 25px auto;       /* centers horizontally */
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}

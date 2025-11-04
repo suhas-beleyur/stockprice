@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📈 Stock Market Visualizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+</head>
+<body>
+  <h2>📊 Stock Market Visualizer</h2>
+  <p>Real-time stock data powered by Yahoo Finance</p>
+
+  <div>
+    <label>Select Stock: </label>
+    <select id="symbol">
+      <optgroup label="US Tech Giants">
+        <option value="AAPL">Apple (AAPL)</option>
+        <option value="GOOGL">Alphabet (GOOGL)</option>
+        <option value="MSFT">Microsoft (MSFT)</option>
+        <option value="AMZN">Amazon (AMZN)</option>
+        <option value="TSLA">Tesla (TSLA)</option>
+        <option value="NVDA">NVIDIA (NVDA)</option>
+        <option value="META">Meta (META)</option>
+      </optgroup>
+
+      <optgroup label="US Finance & Others">
+        <option value="JPM">JPMorgan Chase (JPM)</option>
+        <option value="V">Visa (V)</option>
+        <option value="MA">Mastercard (MA)</option>
+        <option value="NFLX">Netflix (NFLX)</option>
+        <option value="AMD">AMD (AMD)</option>
+        <option value="INTC">Intel (INTC)</option>
+        <option value="IBM">IBM (IBM)</option>
+      </optgroup>
+
+      <optgroup label="Indian Stocks">
+        <option value="RELIANCE.NS">Reliance (RELIANCE.NS)</option>
+        <option value="TCS.NS">TCS (TCS.NS)</option>
+        <option value="INFY.NS">Infosys (INFY.NS)</option>
+        <option value="SBIN.NS">SBI (SBIN.NS)</option>
+        <option value="HDFCBANK.NS">HDFC Bank (HDFCBANK.NS)</option>
+      </optgroup>
+    </select>
+
+    <label>Period: </label>
+    <select id="period">
+      <option value="1d">1 Day</option>
+      <option value="5d">5 Days</option>
+      <option value="1mo" selected>1 Month</option>
+      <option value="6mo">6 Months</option>
+      <option value="1y">1 Year</option>
+      <option value="5y">5 Years</option>
+    </select>
+
+    <button onclick="getStock()">Show Data</button>
+  </div>
+
+  <h3 id="name"></h3>
+  <p id="price"></p>
+
+  <div id="chart" style="width:100%;height:400px;margin-top:20px;"></div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
